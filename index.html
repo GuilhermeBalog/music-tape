@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Tape | Guilherme Balog</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -134,16 +135,15 @@
       <audio src="bensound-happyrock.mp3"></audio>
 
       <div class="buttons">
-        <div class="button">
+        <label class="button">
           <input type="checkbox" id="play" />
-          <label for="play">
-            <button>
-              <i class="fas fa-play"></i>
-            </button>
-          </label>
+          <span>
+            <i class="fas fa-play"></i>
+          </span>
           <p>play</p>
-        </div>
-        <div class="button">
+        </label>
+
+        <div class="button hidden">
           <input type="checkbox" id="reverse" />
           <label for="reverse">
             <button>
@@ -156,7 +156,7 @@
 
       <div class="slider">
         <label for="speed">Speed</label>
-        <input type="range" id="speed" min="0.9" max="3" step="0.1" value="1" />
+        <input type="range" id="speed" min="0" max="2" value="1" step="0.2" />
       </div>
 
       <div class="hidden">

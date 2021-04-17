@@ -11,7 +11,6 @@ html {
 
 body {
   --blue: #28384c;
-  --duration: 0s;
 
   min-height: 100%;
   background-color: #f6f6f6;
@@ -51,21 +50,9 @@ main svg {
 
 #left-circle,
 #right-circle {
-  animation-name: rotate;
-  animation-duration: var(--duration);
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
   transform-origin: center;
   transform-box: fill-box;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
+  transition: transform 0.5s;
 }
 
 main svg + p {
@@ -78,6 +65,10 @@ main .buttons {
   margin-bottom: 1.5rem;
 }
 
+main .buttons label {
+  cursor: pointer;
+}
+
 main .button {
   text-align: center;
 }
@@ -86,23 +77,25 @@ main .button + .button {
   margin-left: 1rem;
 }
 
-main .button button {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.5rem;
-}
-
 input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"] + label button {
+input[type="checkbox"] ~ span {
   -webkit-appearance: none;
   appearance: none;
-  cursor: pointer;
-  background-color: var(--blue);
+
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+
   border: none;
+  border-radius: 0.5rem;
+
+  background-color: var(--blue);
   color: #e7eced;
+  line-height: 2rem;
+  text-align: center;
 }
 
 .slider label {
@@ -116,6 +109,8 @@ input[type="range"] {
 
   width: 100%;
   height: 0.5rem;
+
+  border-radius: 0.25rem;
 
   background-color: var(--blue);
   outline: none;
