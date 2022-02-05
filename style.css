@@ -14,6 +14,7 @@ body {
 
   min-height: 100%;
   background-color: #f6f6f6;
+  padding: 1rem;
 
   font-family: "Bungee", sans-serif;
   color: var(--blue);
@@ -21,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-clip: content-box;
 }
 
 a {
@@ -31,9 +33,14 @@ a {
   display: none;
 }
 
+main {
+  width: 100%;
+  max-width: 310px;
+  text-align: center;
+}
+
 main header {
   margin-bottom: 3.5rem;
-  text-align: center;
 }
 
 main h1 {
@@ -55,8 +62,12 @@ main svg {
   transition: transform 0.5s;
 }
 
+main svg {
+  width: 100%;
+}
+
 main svg + p {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 main .buttons {
@@ -100,6 +111,7 @@ input[type="checkbox"] ~ span {
 
 .slider label {
   margin-bottom: 1rem;
+  text-align: left;
   display: block;
 }
 
